@@ -219,7 +219,7 @@ function PlannerTool() {
                 {result.unscheduled.length > 0 && (
                   <div className="rounded-lg border border-warning/30 bg-warning/10 p-4">
                     <p className="mb-2 font-mono text-[10px] uppercase tracking-widest">
-                      Didn't fit this {horizon.toLowerCase().replace("ly", "")}
+                      Didn't fit this {horizon === "Daily" ? "day" : "week"}
                     </p>
                     <ul className="space-y-1 text-xs text-muted-foreground">
                       {result.unscheduled.map((u, i) => (
